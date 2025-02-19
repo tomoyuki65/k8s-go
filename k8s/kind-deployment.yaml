@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kind-go-deployment
+  # Podと関連付けるラベル
+  labels:
+    app: go-api
+spec:
+  # Podの数の定義
+  replicas: 3
+  # Deploymentが管理するPodの定義
+  selector:
+    matchLabels:
+      app: go-api
+  # 新しいPodを作成する際のテンプレート定義
+  template:
+    metadata:
+      labels:
+        app: go-api
+    spec:
+      containers:
+      - name: go-api
+        image: k8s-go-api:latest
+        # ローカルのDockerイメージを使う設定
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080

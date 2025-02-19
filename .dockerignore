@@ -1,0 +1,6 @@
+.git
+.gitignore
+.dockerignore
+docker
+k8s
+README.md

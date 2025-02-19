@@ -1,0 +1,13 @@
+services:
+  api:
+    container_name: k8s-go-api
+    build:
+      context: .
+      dockerfile: ./docker/local/Dockerfile
+    command: air -c .air.toml
+    volumes:
+      - ./src:/go/src
+    tty: true
+    stdin_open: true
+    ports:
+      - 8080:8080
