@@ -25,7 +25,7 @@ RUN addgroup --system --gid 1001 appuser && \
     adduser --system --uid 1001 appuser
 
 # ビルドステージで作成したバイナリをコピー
-COPY --from=builder ./go/src/main .
+COPY --from=builder --chown=appuser:appuser ./go/src/main .
 
 # ポートを設定
 EXPOSE 8080
