@@ -69,5 +69,5 @@ kind delete cluster
 ```
   
 ## 参考記事  
-[・kindでKubernetes（k8s）のローカル開発環境を作ってGo言語（Golang）のAPIをデプロイする方法](https://golang.tomoyuki65.com/how-to-build-a-k8s-development-environment-with-kind)  
+[・kindでKubernetes（k8s）のローカル開発環境を作ってGo言語（Golang）のAPIをデプロイする方法](https://golang.tomoyuki65.com/how-to-build-a-k8s-development-ev-with-kind)  
   
